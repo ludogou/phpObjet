@@ -8,14 +8,8 @@
 <body>
     <?php
     require 'classes/utilisateur.class.php';
-   $pierre = new Utilisateur();
-   $mathilde = new Utilisateur();
-
-  $pierre->setNom('pierre');
-  $pierre-> setPasse('azert');
-
-  $mathilde->setNom('math');
-  $mathilde->setPasse('12345');
+   $pierre = new Utilisateur('pierre', 'azert');
+   $mathilde = new Utilisateur('mathilde','12345');
 
   echo $pierre->getNom(). '<br>';
   echo $mathilde->getNom(). '<br>';
