@@ -22,12 +22,14 @@
     //  if(isset($_POST['nom'],$_POST['pass'])){
     // $pierre = new Utilisateur($_POST['nom'], $_POST['pass']);
 
-    $pierre = new Admin('pierre', 'azerty','Nord');
+    $pierre = new Admin('pierre', 'azerty','Sud');
     $mathide = new Utilisateur('mathilde', '12345','Sud');
+    $pat = new Utilisateur('pat', '12345','Nord');
 
   
    $pierre->setPrixAbo();
    $mathide->setPrixAbo();
+   $pat->setPrixAbo();
 
    $u='Utilisateur';
    echo 'Valeur de ABONNEMENT dans Utilisateur : '. $u::ABONNEMENT . '<br>';
@@ -36,13 +38,20 @@
    echo"Prix de l'abonnement pour ";
     $pierre->getNom();
     echo' :';
-
     $pierre->getPrixAbo() ;
     echo'<br>';
+
     echo"Prix de l'abonnement pour ";
     $mathide->getNom();
     echo' : ';
     $mathide->getPrixAbo();
+    echo'<br>';
+
+    echo"Prix de l'abonnement pour ";
+    $pat->getNom();
+    echo' : ';
+    $pat->getPrixAbo();
+    echo'<br>';
 
     $pierre->setBan('Paul');
     $pierre->setBan('Jean');
